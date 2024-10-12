@@ -1,0 +1,4 @@
+name: "C:\\Users\\Hp\anaconda3\envs\\myenv"
+channels:
+  - defaults
+prefix: "C:\\Users\\Hp\anaconda3\envs\\myenv"
