@@ -1,7 +1,9 @@
 import streamlit as st
+# Google (How to store and access real-time data )
 import firebase_admin
 from firebase_admin import credentials,auth, firestore
 import pyrebase
+# Library to get the timestamp a user signs up in order to use it to generate a userid
 from datetime import datetime
 
 
@@ -14,7 +16,8 @@ if not firebase_admin._apps:
 
 # Initialize Firestore
 db = firestore.client()
-#st.session_state.db= db
+
+# Youtube
 firebaseConfig = {
   "apiKey": "AIzaSyB6hzhW4oMWFnN0jyAdmLeLK8XCf4O8Viw",
   "authDomain": "frida-ride-system.firebaseapp.com",
@@ -52,6 +55,7 @@ def sign_up():
                     uid = user["localId"]
                     driverid= password + str(datetime.now().microsecond)
                     # My aim is to create a collection "users" with subcollections "riders" and " drivers" and store the user data in a document using their local ID but I just can't seem to get the hang of it
+                    # So I went for four separate collections drivers, riders, riders_location and drivers_location
                     drivers_ref= db.collection("drivers").document(user['localId'])
                     drivers_ref.set({
                      'user_type': user_type,

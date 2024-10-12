@@ -4,6 +4,7 @@ from firebase_admin import firestore
 import plyer
 
 #Initialize the database 
+# Igot how to use firestore from google and firestore documentation
 db= firestore.client()
 
 st.title("New orders will appear here")

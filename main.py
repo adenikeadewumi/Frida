@@ -1,6 +1,7 @@
 import streamlit as st
 from general.auth import sign_up, logout, login
 
+# Youtube, streamlit documentation, and streamlit community discussions
 # Set up the pages general configuration
 st.set_page_config(page_title="Frida", page_icon="🧊", layout= "wide", initial_sidebar_state="auto")
 

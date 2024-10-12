@@ -31,8 +31,6 @@ st.title("Book a ride")
 
 # Function to show availbale drivers near a rider
 def show_avail_drivers(key="available driver"):
-    from plyer import notification
-    riderid= st.session_state.get("uid",None)
     num_drivers= len(list_near_drivers)
     if num_drivers== 0:
         st.write("No available drivers nearby")

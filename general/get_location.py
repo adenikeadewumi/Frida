@@ -52,7 +52,8 @@ if 'coordinates' not in st.session_state:
 # Call the function
 assign_coordinates_to_database()
 
-
+# Google(chrome) 
+# Prompt- How to get the distance between te=wo points using their longitude and latitude
 # get the distance between the rider and driver using acos(sin(lat1)*sin(lat2)+cos(lat1)*cos(lat2)*cos(lon2-lon1))*6371
 def get_distance(dlat,dlong,rlat,rlong):
     r= 6371 # distance of the earth
